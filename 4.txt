@@ -1,0 +1,28 @@
+네번째 시작
+
+A =
+
+2,  1,  0
+3,  4,  0
+0,  0,  0
+
+temp = 
+
+ 0,  0,  0
+ 0,  0,  0 이후것들 다 return 되서 false
+ 0,  0,  0
+
+determinant(A, 2(n))
+{
+	D = 0	
+
+	if (2(n) == 2)
+		return ((A.matrixdata[0][0] * A.matrixdata[1][1]) - 
+			(A.matrixdata[1][0] * A.matrixdata[0][1]))
+
+			=
+
+		return ((2 * 4) - (3 * 1)) -> 8 - 3 = 5
+
+이후것들 다 return 되서 false
+}

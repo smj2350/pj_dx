@@ -1,0 +1,92 @@
+첫번째 시작
+
+A =
+
+ 1,  0,  5
+ 2,  1,  6
+ 3,  4,  0
+
+temp = 
+
+ 0,  0,  0
+ 0,  0,  0
+ 0,  0,  0
+
+determinant(A, 3(n))
+{
+	D = 0
+
+	
+	if (3(n) == 2)
+		false
+
+	Matrix temp(3(A.maxRow), 3(A.maxCol))
+	
+	sign = 1
+
+	for : 0 (int f = 0; f < n; f++)
+	{
+		getCofactor(A, temp, 0, 0(f), 3(n)) ->
+
+		new Temp = 
+
+		1,  6,  0
+		4,  0,  0
+		0,  0,  0
+
+		0(D) += 1(sign) * 1(A.matrixdata[0][0(f)]) * -24(determinant(temp(new), 3(n) - 1)) <- 두번째 시작
+
+			->
+
+		0 += 1 * 1 * -24 = -24
+
+		1(sign) = -1(-sign) = -1
+
+	}
+
+	for : 1 (int f = 0; f < n; f++)
+	{
+		getCofactor(A, temp, 0, 1(f), 3(n)) ->
+
+		new Temp = 
+
+		2,  6,  0
+		3,  0,  0
+		0,  0,  0
+
+		-24(D) += -1(sign) * 0(A.matrixdata[0][1(f)]) * -18(determinant(temp(new), 3(n) - 1)) <- 세번째 시작
+
+			->
+
+		-24 += -1 * 0 * -18 = -24
+
+		-1(sign) = 1(-sign) = 1
+
+	}
+
+	for : 2 (int f = 0; f < n; f++)
+	{
+		getCofactor(A, temp, 0, 2(f), 3(n)) ->
+
+		new Temp = 
+
+		2,  1,  0
+		3,  4,  0
+		0,  0,  0
+
+		-24(D) += 1(sign) * 5(A.matrixdata[0][2(f)]) * 5(determinant(temp(new), 3(n) - 1)) <- 네번째 시작
+
+			->
+
+		-24 += 1 * 5 * 5 = 1
+
+		1(sign) = -1(-sign) = -1
+
+	}
+
+	return 1(D)
+}
+
+D = 1
+
+Determinant = 1
